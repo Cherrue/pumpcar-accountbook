@@ -23,18 +23,18 @@ LIST_HEADER_SIZE_TAB3 = [130, 200, 80, 80, 65, 150, 200, 65, 65, 200]
 LIST_HEADER_NAME_TAB4 = ["순번", "거래일자", "거래처", "시작",
                          "종료", "타설량", "금액", "차량", "수금", "비고"]
 LIST_HEADER_SIZE_TAB4 = [60, 130, 200, 80, 80, 65, 150, 65, 65, 200]
-QUERY_SELECT_TAB1 = "SELECT GDATE, ITEM, SIKAN1, SIKAN2, MUL, GUM, CAR, SUGUM FROM WORKED_DATA ORDER BY GDATE DESC, SIKAN1 DESC, ID DESC LIMIT 20"
-QUERY_SELECT_TAB2 = "SELECT ID, GDATE, ITEM, SIKAN1, SIKAN2, MUL, GUM, CAR, SUGUM, BIGO FROM WORKED_DATA WHERE 1=1 " + \
+QUERY_SELECT_TAB1 = "SELECT GDATE, ITEM, SIKAN1, SIKAN2, MUL, printf('%,d', GUM), CAR, SUGUM FROM WORKED_DATA ORDER BY GDATE DESC, SIKAN1 DESC, ID DESC LIMIT 20"
+QUERY_SELECT_TAB2 = "SELECT ID, GDATE, ITEM, SIKAN1, SIKAN2, MUL, printf('%,d', GUM), CAR, SUGUM, BIGO FROM WORKED_DATA WHERE 1=1 " + \
     WHERE_CONDITION + " ORDER BY GDATE DESC, SIKAN1 DESC, ID DESC"
 QUERY_UPDATE_BLACK_TAB2 = "UPDATE WORKED_DATA SET BLACK='Y' WHERE 1=1 " + WHERE_CONDITION
 QUERY_DELETE_TAB2 = "DELETE FROM WORKED_DATA WHERE 1=1 " + WHERE_CONDITION
-QUERY_SELECT_TAB3 = "SELECT GDATE, ITEM, SIKAN1, SIKAN2, MUL, GUM, SUM(GUM) OVER(ORDER BY GDATE, SIKAN1, ID), CAR, SUGUM, BIGO FROM WORKED_DATA WHERE 1=1 " + \
+QUERY_SELECT_TAB3 = "SELECT GDATE, ITEM, SIKAN1, SIKAN2, MUL, printf('%,d', GUM), printf('%,d', SUM(GUM) OVER(ORDER BY GDATE, SIKAN1, ID)), CAR, SUGUM, BIGO FROM WORKED_DATA WHERE 1=1 " + \
     WHERE_CONDITION + " ORDER BY GDATE DESC, SIKAN1 DESC, ID DESC"
-QUERY_TOTAL_TAKE_TAB3 = "SELECT COUNT(*), SUM(GUM) FROM WORKED_DATA WHERE 1=1 " + \
+QUERY_TOTAL_TAKE_TAB3 = "SELECT COUNT(*), printf('%,d', SUM(GUM)), printf('%,d', SUM(cast(MUL as INTEGER))) FROM WORKED_DATA WHERE 1=1 " + \
     WHERE_CONDITION
-QUERY_SUBTOTAL_TAKE_TAB3 = "SELECT SUGUM, SUM(GUM) FROM WORKED_DATA WHERE 1=1 " + \
+QUERY_SUBTOTAL_TAKE_TAB3 = "SELECT SUGUM, printf('%,d', SUM(GUM)) FROM WORKED_DATA WHERE 1=1 " + \
     WHERE_CONDITION + " GROUP BY SUGUM"
-QUERY_SELECT_TAB4 = "SELECT ID, GDATE, ITEM, SIKAN1, SIKAN2, MUL, GUM, CAR, SUGUM, BIGO FROM WORKED_DATA WHERE BLACK = 'Y' ORDER BY GDATE DESC, SIKAN1 DESC, ID DESC"
+QUERY_SELECT_TAB4 = "SELECT ID, GDATE, ITEM, SIKAN1, SIKAN2, MUL, printf('%,d', GUM), CAR, SUGUM, BIGO FROM WORKED_DATA WHERE BLACK = 'Y' ORDER BY GDATE DESC, SIKAN1 DESC, ID DESC"
 QUERY_UPDATE_NOBLACK_TAB4 = "UPDATE WORKED_DATA SET BLACK='N' WHERE 1=1 " + WHERE_CONDITION
 
 
@@ -83,6 +83,8 @@ class WindowClass(QMainWindow, form_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+
+        self.showMaximized()
 
         self.tabWidgetMain.currentChanged.connect(
             self.tabWidgetMainChangeFunction)
@@ -203,6 +205,8 @@ class WindowClass(QMainWindow, form_class):
         insertWorkedData(query, dictInputData)
         self.modelWorkedDataTab1.setQuery(QUERY_SELECT_TAB1)
 
+        self.buttonResetTab1.clicked.emit()
+
     def buttonResetTab1Function(self):
         self.calendarWidgetTab1.setSelectedDate(QDate.currentDate())
         self.calendarWidgetTab1Function()  # label까지 업데이트
@@ -214,6 +218,8 @@ class WindowClass(QMainWindow, form_class):
         self.inputCarTab1.clear()
         self.inputCollectTab1.setCurrentIndex(0)
         self.inputRemarkTab1.clear()
+
+        self.inputCompanyTab1.setFocus()
 
     # tab 2 start
     def buttonSearchTab2Function(self):
@@ -353,12 +359,16 @@ class WindowClass(QMainWindow, form_class):
         query.exec(queryStringTotalTake)
         rec = query.record()
         query.next()
-        countData, totalTake = str(query.value(0)), str(query.value(1))
+        countData, totalTake, totalAmount = str(
+            query.value(0)), str(query.value(1)), str(query.value(2))
 
         self.inputRowNoTab3.setText(countData)
         self.inputTotalTab3.setText(totalTake)
+        self.inputTotalAmountTab3.setText(totalAmount)
         if totalTake == "":
             self.inputTotalTab3.setText("0")
+        if totalAmount == "":
+            self.inputTotalAmountTab3.setText("0")
 
         queryStringSubtotalTake = QUERY_SUBTOTAL_TAKE_TAB3
         queryStringSubtotalTake = queryStringSubtotalTake.replace(

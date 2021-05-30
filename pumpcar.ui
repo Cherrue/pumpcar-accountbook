@@ -10,6 +10,12 @@
     <height>720</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -26,13 +32,15 @@
     <property name="font">
      <font>
       <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="tabShape">
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <property name="iconSize">
      <size>
@@ -961,7 +969,7 @@
      <widget class="QLabel" name="inputRowNoTab3">
       <property name="geometry">
        <rect>
-        <x>130</x>
+        <x>80</x>
         <y>580</y>
         <width>120</width>
         <height>30</height>
@@ -974,7 +982,7 @@
      <widget class="QLabel" name="labelTotalTab3">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>260</x>
         <y>580</y>
         <width>90</width>
         <height>30</height>
@@ -987,7 +995,7 @@
      <widget class="QLabel" name="inputTotalTab3">
       <property name="geometry">
        <rect>
-        <x>380</x>
+        <x>310</x>
         <y>580</y>
         <width>130</width>
         <height>30</height>
@@ -1000,7 +1008,7 @@
      <widget class="QLabel" name="labelTotalNoCollectTab3">
       <property name="geometry">
        <rect>
-        <x>560</x>
+        <x>500</x>
         <y>580</y>
         <width>70</width>
         <height>30</height>
@@ -1013,7 +1021,7 @@
      <widget class="QLabel" name="inputTotalNoCollectTab3">
       <property name="geometry">
        <rect>
-        <x>630</x>
+        <x>540</x>
         <y>580</y>
         <width>130</width>
         <height>30</height>
@@ -1026,7 +1034,7 @@
      <widget class="QLabel" name="labelTotalCollectTab3">
       <property name="geometry">
        <rect>
-        <x>800</x>
+        <x>720</x>
         <y>580</y>
         <width>70</width>
         <height>30</height>
@@ -1039,7 +1047,7 @@
      <widget class="QLabel" name="inputTotalCollectTab3">
       <property name="geometry">
        <rect>
-        <x>870</x>
+        <x>760</x>
         <y>580</y>
         <width>130</width>
         <height>30</height>
@@ -1108,6 +1116,32 @@
        <string>출력</string>
       </property>
      </widget>
+     <widget class="QLabel" name="inputTotalAmountTab3">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>580</y>
+        <width>130</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>100000</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelTotalAmountTab3">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>580</y>
+        <width>70</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>총타설량 :</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab4BadCompany">
      <attribute name="title">
@@ -1162,6 +1196,8 @@
     <property name="font">
      <font>
       <pointsize>25</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -1176,6 +1212,51 @@
    </widget>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>tabWidgetMain</tabstop>
+  <tabstop>tableDataTab1</tabstop>
+  <tabstop>calendarWidgetTab1</tabstop>
+  <tabstop>inputCompanyTab1</tabstop>
+  <tabstop>inputCarTab1</tabstop>
+  <tabstop>inputPriceTab1</tabstop>
+  <tabstop>inputTimeStartTab1</tabstop>
+  <tabstop>inputTimeEndTab1</tabstop>
+  <tabstop>inputCollectTab1</tabstop>
+  <tabstop>inputAmountTab1</tabstop>
+  <tabstop>inputRemarkTab1</tabstop>
+  <tabstop>buttonSaveTab1</tabstop>
+  <tabstop>buttonResetTab1</tabstop>
+  <tabstop>tableDataTab2</tabstop>
+  <tabstop>inputSearchDateStartTab2</tabstop>
+  <tabstop>inputSearchDateEndTab2</tabstop>
+  <tabstop>inputSearchCollectTab2</tabstop>
+  <tabstop>inputSearchCompanyTab2</tabstop>
+  <tabstop>buttonSearchTab2</tabstop>
+  <tabstop>inputDateTab2</tabstop>
+  <tabstop>inputCompanyTab2</tabstop>
+  <tabstop>inputCarTab2</tabstop>
+  <tabstop>inputPriceTab2</tabstop>
+  <tabstop>inputTimeStartTab2</tabstop>
+  <tabstop>inputTimeEndTab2</tabstop>
+  <tabstop>inputCollectTab2</tabstop>
+  <tabstop>inputAmountTab2</tabstop>
+  <tabstop>inputRemarkTab2</tabstop>
+  <tabstop>buttonModifyTab2</tabstop>
+  <tabstop>buttonResetTab2</tabstop>
+  <tabstop>buttonBlackTab2</tabstop>
+  <tabstop>buttonDeleteTab2</tabstop>
+  <tabstop>tableDataTab3</tabstop>
+  <tabstop>inputSearchDateStartTab3</tabstop>
+  <tabstop>inputSearchDateEndTab3</tabstop>
+  <tabstop>inputSearchCollectTab3</tabstop>
+  <tabstop>inputSearchCompanyTab3</tabstop>
+  <tabstop>inputSearchCarTab3</tabstop>
+  <tabstop>inputSearchRemarkTab3</tabstop>
+  <tabstop>buttonSearchTab3</tabstop>
+  <tabstop>buttonPrintTab3</tabstop>
+  <tabstop>buttonBlackTab4</tabstop>
+  <tabstop>tableDataTab4</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
