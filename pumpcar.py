@@ -5,9 +5,10 @@ from PyQt5.QtCore import Qt, QVariant, QDate, Qt
 from PyQt5.QtGui import QPdfWriter, QPagedPaintDevice, QPainter, QScreen, QPixmap
 from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
 
-UPDATE_INFO = " v1.2 정보창", "v1.2\n업데이트내역 추가\n총매출액 글씨 겹치는 오류 수정\n금액 수정 시 데이터 날라가는 오류 수정\n시간 입력 방식 수정\n프린트 데모 기능 추가\n\n\
-v1.1\n창 켜자마자 최대화\n탭 입력 시 폼 포커스 순서 변경\n금액에 , 추가\n입력 버튼 클릭 시 거래처로 커서\n총타설량 추가(조회탭)\n글씨체 전반적으로 굵게 변경\n\n\
-v1.0\n최초개발"
+VERSION_INFO = " v1.2 정보창 - 2021-05-31"
+UPDATE_INFO = "v1.2(2021-05-31)\n업데이트내역 추가\n총매출액 글씨 겹치는 오류 수정\n금액 수정 시 데이터 날라가는 오류 수정\n시간 입력 방식 수정\n프린트 데모 기능 추가\n\n\
+v1.1(2021-05-30)\n창 켜자마자 최대화\n탭 입력 시 폼 포커스 순서 변경\n금액에 , 추가\n입력 버튼 클릭 시 거래처로 커서\n총타설량 추가(조회탭)\n글씨체 전반적으로 굵게 변경\n\n\
+v1.0(2021-05-25)\n최초개발"
 
 # UI파일 연결
 # 단, UI파일은 Python 코드 파일과 같은 디렉토리에 위치해야한다.
@@ -201,7 +202,7 @@ class WindowClass(QMainWindow, form_class):
             self.modelWorkedDataTab4.setQuery(QUERY_SELECT_TAB4)
 
     def buttonUpdatedInfoFunction(self):
-        QMessageBox.about(self, UPDATE_INFO)
+        QMessageBox.about(self, VERSION_INFO, UPDATE_INFO)
 
     # tab 1
     def calendarWidgetTab1Function(self):
