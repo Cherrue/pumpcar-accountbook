@@ -1856,27 +1856,26 @@
   </widget>
  </widget>
  <tabstops>
+  <tabstop>tabWidgetMain</tabstop>
   <tabstop>tableDataTab1</tabstop>
-  <tabstop>calendarWidgetTab1</tabstop>
   <tabstop>inputCompanyTab1</tabstop>
   <tabstop>inputCarTab1</tabstop>
   <tabstop>inputPriceTab1</tabstop>
-  <tabstop>inputCollectTab1</tabstop>
   <tabstop>inputTimeStartTab1</tabstop>
+  <tabstop>inputTimeEndTab1</tabstop>
+  <tabstop>inputCollectTab1</tabstop>
   <tabstop>inputAmountTab1</tabstop>
   <tabstop>inputRemarkTab1</tabstop>
   <tabstop>buttonSaveTab1</tabstop>
   <tabstop>buttonResetTab1</tabstop>
+  <tabstop>calendarWidgetTab1</tabstop>
   <tabstop>tableDataTab2</tabstop>
-  <tabstop>inputSearchDateStartTab2</tabstop>
-  <tabstop>inputSearchDateEndTab2</tabstop>
-  <tabstop>inputSearchCollectTab2</tabstop>
-  <tabstop>inputSearchCompanyTab2</tabstop>
-  <tabstop>buttonSearchTab2</tabstop>
   <tabstop>inputDateTab2</tabstop>
   <tabstop>inputCompanyTab2</tabstop>
   <tabstop>inputCarTab2</tabstop>
   <tabstop>inputPriceTab2</tabstop>
+  <tabstop>inputTimeStartTab2</tabstop>
+  <tabstop>inputTimeEndTab2</tabstop>
   <tabstop>inputCollectTab2</tabstop>
   <tabstop>inputAmountTab2</tabstop>
   <tabstop>inputRemarkTab2</tabstop>
@@ -1884,6 +1883,11 @@
   <tabstop>buttonResetTab2</tabstop>
   <tabstop>buttonBlackTab2</tabstop>
   <tabstop>buttonDeleteTab2</tabstop>
+  <tabstop>inputSearchDateStartTab2</tabstop>
+  <tabstop>inputSearchDateEndTab2</tabstop>
+  <tabstop>inputSearchCollectTab2</tabstop>
+  <tabstop>inputSearchCompanyTab2</tabstop>
+  <tabstop>buttonSearchTab2</tabstop>
   <tabstop>tableDataTab3</tabstop>
   <tabstop>inputSearchDateStartTab3</tabstop>
   <tabstop>inputSearchDateEndTab3</tabstop>
@@ -1895,8 +1899,7 @@
   <tabstop>buttonPrintTab3</tabstop>
   <tabstop>buttonBlackTab4</tabstop>
   <tabstop>tableDataTab4</tabstop>
-  <tabstop>inputTimeEndTab1</tabstop>
-  <tabstop>tabWidgetMain</tabstop>
+  <tabstop>buttonUpdatedInfo</tabstop>
  </tabstops>
  <resources/>
  <connections/>
