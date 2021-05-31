@@ -1,7 +1,9 @@
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic, QtSql
-from PyQt5.QtCore import Qt, QVariant, QDate, QTime
+from PyQt5.QtCore import Qt, QVariant, QDate, Qt
+from PyQt5.QtGui import QPdfWriter, QPagedPaintDevice, QPainter, QScreen, QPixmap
+from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
 
 # UI파일 연결
 # 단, UI파일은 Python 코드 파일과 같은 디렉토리에 위치해야한다.
@@ -88,6 +90,7 @@ class WindowClass(QMainWindow, form_class):
 
         self.tabWidgetMain.currentChanged.connect(
             self.tabWidgetMainChangeFunction)
+        self.buttonUpdatedInfo.clicked.connect(self.buttonUpdatedInfoFunction)
 
         # tab 1 start
         self.modelWorkedDataTab1 = QtSql.QSqlQueryModel(self)
@@ -164,6 +167,7 @@ class WindowClass(QMainWindow, form_class):
             self.tableDataTab3.setColumnWidth(i, LIST_HEADER_SIZE_TAB3[i])
 
         self.buttonSearchTab3.clicked.connect(self.buttonSearchTab3Function)
+        self.buttonPrintTab3.clicked.connect(self.buttonPrintTab3Function)
         # tab 3 end
 
         # tab 4 start
@@ -192,6 +196,12 @@ class WindowClass(QMainWindow, form_class):
         elif _index == 3:
             self.modelWorkedDataTab4.setQuery(QUERY_SELECT_TAB4)
 
+    def buttonUpdatedInfoFunction(self):
+        QMessageBox.about(
+            self, " v1.2 정보창", "v1.2\n업데이트내역 추가\n총매출액 글씨 겹치는 오류 수정\n금액 수정 시 데이터 날라가는 오류 수정\n시간 입력 방식 수정\n프린트 데모 기능 추가\n\n\
+v1.1\n창 켜자마자 최대화\n탭 입력 시 폼 포커스 순서 변경\n금액에 , 추가\n입력 버튼 클릭 시 거래처로 커서\n총타설량 추가(조회탭)\n글씨체 전반적으로 굵게 변경\n\n\
+v1.0\n최초개발")
+
     # tab 1
     def calendarWidgetTab1Function(self):
         self.inputDateTab1.setText(
@@ -199,7 +209,7 @@ class WindowClass(QMainWindow, form_class):
 
     def buttonSaveTab1Function(self):
         query = QtSql.QSqlQuery()
-        dictInputData = {LIST_COL_WORKED_DATA[1]: self.inputDateTab1.text(), LIST_COL_WORKED_DATA[2]: self.inputCompanyTab1.text(), LIST_COL_WORKED_DATA[3]: self.inputTimeStartTab1.text(), LIST_COL_WORKED_DATA[4]: self.inputTimeEndTab1.text(),
+        dictInputData = {LIST_COL_WORKED_DATA[1]: self.inputDateTab1.text(), LIST_COL_WORKED_DATA[2]: self.inputCompanyTab1.text(), LIST_COL_WORKED_DATA[3]: self.inputTimeStartTab1.currentText(), LIST_COL_WORKED_DATA[4]: self.inputTimeEndTab1.currentText(),
                          LIST_COL_WORKED_DATA[5]: self.inputAmountTab1.text(), LIST_COL_WORKED_DATA[6]: self.inputPriceTab1.text(), LIST_COL_WORKED_DATA[7]: self.inputCarTab1.text(), LIST_COL_WORKED_DATA[8]: self.inputCollectTab1.currentText(), LIST_COL_WORKED_DATA[9]: self.inputRemarkTab1.text()}
 
         insertWorkedData(query, dictInputData)
@@ -211,8 +221,8 @@ class WindowClass(QMainWindow, form_class):
         self.calendarWidgetTab1.setSelectedDate(QDate.currentDate())
         self.calendarWidgetTab1Function()  # label까지 업데이트
         self.inputCompanyTab1.clear()
-        self.inputTimeStartTab1.setTime(self.inputTimeStartTab1.minimumTime())
-        self.inputTimeEndTab1.setTime(self.inputTimeStartTab1.minimumTime())
+        self.inputTimeStartTab1.setCurrentIndex(0)
+        self.inputTimeEndTab1.setCurrentIndex(0)
         self.inputAmountTab1.clear()
         self.inputPriceTab1.clear()
         self.inputCarTab1.clear()
@@ -253,16 +263,17 @@ class WindowClass(QMainWindow, form_class):
         self.inputCarTab2.setText(
             objSelectedCell.siblingAtColumn(7).data())
         self.inputPriceTab2.setText(
-            str(objSelectedCell.siblingAtColumn(6).data()))
+            str(objSelectedCell.siblingAtColumn(6).data()).replace(",", ""))
 
-        self.inputTimeStartTab2.setTime(
-            QTime.fromString(objSelectedCell.siblingAtColumn(3).data(), "hh:mm"))
-        self.inputTimeEndTab2.setTime(
-            QTime.fromString(objSelectedCell.siblingAtColumn(4).data(), "hh:mm"))
-        if objSelectedCell.siblingAtColumn(8).data() == "수금":
-            self.inputCollectTab2.setCurrentIndex(1)
-        else:
-            self.inputCollectTab2.setCurrentIndex(0)
+        idxStartTime = self.inputTimeStartTab2.findText(
+            objSelectedCell.siblingAtColumn(3).data(), Qt.MatchFixedString)
+        self.inputTimeStartTab2.setCurrentIndex(idxStartTime)
+        idxEndTime = self.inputTimeEndTab2.findText(
+            objSelectedCell.siblingAtColumn(4).data(), Qt.MatchFixedString)
+        self.inputTimeEndTab2.setCurrentIndex(idxEndTime)
+        idxCollect = self.inputCollectTab2.findText(
+            objSelectedCell.siblingAtColumn(8).data(), Qt.MatchFixedString)
+        self.inputCollectTab2.setCurrentIndex(idxCollect)
 
         self.inputAmountTab2.setText(
             objSelectedCell.siblingAtColumn(5).data())
@@ -287,10 +298,8 @@ class WindowClass(QMainWindow, form_class):
         if not len(self.tableDataTab2.selectedIndexes()):
             self.inputDateTab2.setDate(QDate.currentDate())
             self.inputCompanyTab2.clear()
-            self.inputTimeStartTab2.setTime(
-                self.inputTimeStartTab1.minimumTime())
-            self.inputTimeEndTab2.setTime(
-                self.inputTimeStartTab1.minimumTime())
+            self.inputTimeStartTab2.setCurrentIndex(0)
+            self.inputTimeEndTab2.setCurrentIndex(0)
             self.inputAmountTab2.clear()
             self.inputPriceTab2.clear()
             self.inputCarTab2.clear()
@@ -318,7 +327,7 @@ class WindowClass(QMainWindow, form_class):
             0].siblingAtColumn(0).data()
 
         query = QtSql.QSqlQuery()
-        dictInputData = {LIST_COL_WORKED_DATA[1]: self.inputDateTab2.date().toString("yyyy-MM-dd"), LIST_COL_WORKED_DATA[2]: self.inputCompanyTab2.text(), LIST_COL_WORKED_DATA[3]: self.inputTimeStartTab2.text(), LIST_COL_WORKED_DATA[4]: self.inputTimeEndTab2.text(),
+        dictInputData = {LIST_COL_WORKED_DATA[1]: self.inputDateTab2.date().toString("yyyy-MM-dd"), LIST_COL_WORKED_DATA[2]: self.inputCompanyTab2.text(), LIST_COL_WORKED_DATA[3]: self.inputTimeStartTab2.currentText(), LIST_COL_WORKED_DATA[4]: self.inputTimeEndTab2.currentText(),
                          LIST_COL_WORKED_DATA[5]: self.inputAmountTab2.text(), LIST_COL_WORKED_DATA[6]: self.inputPriceTab2.text(), LIST_COL_WORKED_DATA[7]: self.inputCarTab2.text(), LIST_COL_WORKED_DATA[8]: self.inputCollectTab2.currentText(), LIST_COL_WORKED_DATA[9]: self.inputRemarkTab2.text()}
 
         updateWorkedData(query, selectedRowNumber, dictInputData)
@@ -388,7 +397,38 @@ class WindowClass(QMainWindow, form_class):
         else:
             self.inputTotalNoCollectTab3.setText("0")
 
+    def buttonPrintTab3Function(self):
+        # 프린터 생성, 실행
+        printer = QPrinter()
+        dlg = QPrintDialog(printer, self)
+        if dlg.exec() == QDialog.Accepted:
+            # Painter 생성
+            qp = QPainter()
+            qp.begin(printer)
+
+            # 여백 비율
+            wgap = printer.pageRect().width()*0.1
+            hgap = printer.pageRect().height()*0.1
+
+            # 화면 중앙에 위젯 배치
+            xscale = (printer.pageRect().width()-wgap) / \
+                self.tableDataTab3.width()
+            yscale = (printer.pageRect().height()-hgap) / \
+                self.tableDataTab3.height()
+            scale = xscale if xscale < yscale else yscale
+            qp.translate(printer.paperRect().x() + printer.pageRect().width()/2,
+                         printer.paperRect().y() + printer.pageRect().height()/2)
+            qp.scale(scale, scale)
+            qp.translate(-self.tableDataTab3.width() /
+                         2, -self.tableDataTab3.height()/2)
+
+            # 인쇄
+            self.tableDataTab3.render(qp)
+
+            qp.end()
+
     # tab 4 start
+
     def buttonBlackTab4Function(self):
         queryString = QUERY_UPDATE_NOBLACK_TAB4
         if not len(self.tableDataTab4.selectedIndexes()):

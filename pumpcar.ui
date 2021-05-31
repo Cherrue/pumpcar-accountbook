@@ -40,7 +40,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="iconSize">
      <size>
@@ -271,41 +271,6 @@
        </rect>
       </property>
      </widget>
-     <widget class="QTimeEdit" name="inputTimeStartTab1">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>275</y>
-        <width>80</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="displayFormat">
-       <string>hh:mm</string>
-      </property>
-      <property name="calendarPopup">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QTimeEdit" name="inputTimeEndTab1">
-      <property name="geometry">
-       <rect>
-        <x>300</x>
-        <y>275</y>
-        <width>80</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="displayFormat">
-       <string>hh:mm</string>
-      </property>
-     </widget>
      <widget class="QComboBox" name="inputCollectTab1">
       <property name="geometry">
        <rect>
@@ -358,6 +323,356 @@
       <property name="text">
        <string>초기화</string>
       </property>
+     </widget>
+     <widget class="QComboBox" name="inputTimeStartTab1">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>275</y>
+        <width>90</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>06:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>06:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>07:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>07:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>08:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>08:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>09:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>09:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>17:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>17:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>18:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>18:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>19:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>19:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>21:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>21:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>22:00</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="inputTimeEndTab1">
+      <property name="geometry">
+       <rect>
+        <x>295</x>
+        <y>275</y>
+        <width>90</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>06:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>06:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>07:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>07:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>08:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>08:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>09:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>09:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>17:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>17:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>18:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>18:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>19:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>19:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>21:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>21:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>22:00</string>
+       </property>
+      </item>
      </widget>
     </widget>
     <widget class="QWidget" name="tab2ModifyData">
@@ -485,22 +800,6 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QTimeEdit" name="inputTimeEndTab2">
-      <property name="geometry">
-       <rect>
-        <x>300</x>
-        <y>275</y>
-        <width>80</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="displayFormat">
-       <string>hh:mm</string>
-      </property>
-     </widget>
      <widget class="QLineEdit" name="inputCarTab2">
       <property name="geometry">
        <rect>
@@ -611,25 +910,6 @@
         <width>180</width>
         <height>30</height>
        </rect>
-      </property>
-     </widget>
-     <widget class="QTimeEdit" name="inputTimeStartTab2">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>275</y>
-        <width>80</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="displayFormat">
-       <string>hh:mm</string>
-      </property>
-      <property name="calendarPopup">
-       <bool>false</bool>
       </property>
      </widget>
      <widget class="QLabel" name="labelDateTab2">
@@ -825,6 +1105,356 @@
        <string>검색</string>
       </property>
      </widget>
+     <widget class="QComboBox" name="inputTimeEndTab2">
+      <property name="geometry">
+       <rect>
+        <x>295</x>
+        <y>275</y>
+        <width>90</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>06:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>06:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>07:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>07:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>08:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>08:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>09:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>09:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>17:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>17:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>18:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>18:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>19:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>19:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>21:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>21:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>22:00</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="inputTimeStartTab2">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>275</y>
+        <width>90</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>06:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>06:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>07:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>07:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>08:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>08:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>09:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>09:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>14:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>16:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>17:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>17:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>18:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>18:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>19:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>19:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>21:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>21:30</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>22:00</string>
+       </property>
+      </item>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab3SearchData">
      <attribute name="title">
@@ -969,7 +1599,7 @@
      <widget class="QLabel" name="inputRowNoTab3">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>130</x>
         <y>580</y>
         <width>120</width>
         <height>30</height>
@@ -982,7 +1612,7 @@
      <widget class="QLabel" name="labelTotalTab3">
       <property name="geometry">
        <rect>
-        <x>260</x>
+        <x>250</x>
         <y>580</y>
         <width>90</width>
         <height>30</height>
@@ -995,7 +1625,7 @@
      <widget class="QLabel" name="inputTotalTab3">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>340</x>
         <y>580</y>
         <width>130</width>
         <height>30</height>
@@ -1008,7 +1638,7 @@
      <widget class="QLabel" name="labelTotalNoCollectTab3">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>470</x>
         <y>580</y>
         <width>70</width>
         <height>30</height>
@@ -1034,7 +1664,7 @@
      <widget class="QLabel" name="labelTotalCollectTab3">
       <property name="geometry">
        <rect>
-        <x>720</x>
+        <x>670</x>
         <y>580</y>
         <width>70</width>
         <height>30</height>
@@ -1047,7 +1677,7 @@
      <widget class="QLabel" name="inputTotalCollectTab3">
       <property name="geometry">
        <rect>
-        <x>760</x>
+        <x>740</x>
         <y>580</y>
         <width>130</width>
         <height>30</height>
@@ -1119,9 +1749,9 @@
      <widget class="QLabel" name="inputTotalAmountTab3">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>940</x>
         <y>580</y>
-        <width>130</width>
+        <width>120</width>
         <height>30</height>
        </rect>
       </property>
@@ -1132,7 +1762,7 @@
      <widget class="QLabel" name="labelTotalAmountTab3">
       <property name="geometry">
        <rect>
-        <x>940</x>
+        <x>870</x>
         <y>580</y>
         <width>70</width>
         <height>30</height>
@@ -1210,18 +1840,29 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QPushButton" name="buttonUpdatedInfo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>업데이트내역</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>tabWidgetMain</tabstop>
   <tabstop>tableDataTab1</tabstop>
   <tabstop>calendarWidgetTab1</tabstop>
   <tabstop>inputCompanyTab1</tabstop>
   <tabstop>inputCarTab1</tabstop>
   <tabstop>inputPriceTab1</tabstop>
-  <tabstop>inputTimeStartTab1</tabstop>
-  <tabstop>inputTimeEndTab1</tabstop>
   <tabstop>inputCollectTab1</tabstop>
+  <tabstop>inputTimeStartTab1</tabstop>
   <tabstop>inputAmountTab1</tabstop>
   <tabstop>inputRemarkTab1</tabstop>
   <tabstop>buttonSaveTab1</tabstop>
@@ -1236,8 +1877,6 @@
   <tabstop>inputCompanyTab2</tabstop>
   <tabstop>inputCarTab2</tabstop>
   <tabstop>inputPriceTab2</tabstop>
-  <tabstop>inputTimeStartTab2</tabstop>
-  <tabstop>inputTimeEndTab2</tabstop>
   <tabstop>inputCollectTab2</tabstop>
   <tabstop>inputAmountTab2</tabstop>
   <tabstop>inputRemarkTab2</tabstop>
@@ -1256,6 +1895,8 @@
   <tabstop>buttonPrintTab3</tabstop>
   <tabstop>buttonBlackTab4</tabstop>
   <tabstop>tableDataTab4</tabstop>
+  <tabstop>inputTimeEndTab1</tabstop>
+  <tabstop>tabWidgetMain</tabstop>
  </tabstops>
  <resources/>
  <connections/>
