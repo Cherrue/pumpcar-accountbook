@@ -1,12 +1,16 @@
 import sys
+import datetime
 from PyQt5.QtWidgets import *
 from PyQt5 import uic, QtSql
-from PyQt5.QtCore import Qt, QVariant, QDate, Qt
-from PyQt5.QtGui import QPdfWriter, QPagedPaintDevice, QPainter, QScreen, QPixmap
-from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
+from PyQt5.QtCore import Qt, QVariant, QDate, Qt, QSizeF
+from PyQt5.QtGui import QTextDocument, QTextCursor, QPainter
+from PyQt5.QtPrintSupport import QPrinter, QPrintDialog, QPrintPreviewDialog
 
-VERSION_INFO = " v1.2 정보창 - 2021-05-31"
-UPDATE_INFO = "v1.2(2021-05-31)\n업데이트내역 추가\n총매출액 글씨 겹치는 오류 수정\n금액 수정 시 데이터 날라가는 오류 수정\n시간 입력 방식 수정\n프린트 데모 기능 추가\n\n\
+VERSION_INFO = " v1.4 정보창 - 2021-06-01"
+UPDATE_INFO = \
+    "v1.4(2021-06-01)\n출력 기능 베타\n입력창 금액 , 추가(tab1,2)\n이전해/다음해 버튼 추가(tab1)\n\n\
+v1.3(2021-06-01)\n입력 후 날짜 변경 안 되도록 수정\n수정 초기 검색 범위 1999년으로 수정\n총타설량 옆 공백 추가\n\n\
+v1.2(2021-05-31)\n업데이트내역 추가\n총매출액 글씨 겹치는 오류 수정\n금액 수정 시 데이터 날라가는 오류 수정\n시간 입력 방식 수정\n프린트 데모 기능 추가\n\n\
 v1.1(2021-05-30)\n창 켜자마자 최대화\n탭 입력 시 폼 포커스 순서 변경\n금액에 , 추가\n입력 버튼 클릭 시 거래처로 커서\n총타설량 추가(조회탭)\n글씨체 전반적으로 굵게 변경\n\n\
 v1.0(2021-05-25)\n최초개발"
 
@@ -111,22 +115,32 @@ class WindowClass(QMainWindow, form_class):
         for i in range(len(LIST_HEADER_SIZE_TAB1)):
             self.tableDataTab1.setColumnWidth(i, LIST_HEADER_SIZE_TAB1[i])
 
+        self.inputPriceTab1.textEdited.connect(
+            self.changeInputPriceTab1Function)
+
         self.calendarWidgetTab1.setGridVisible(True)
         self.calendarWidgetTab1.clicked.connect(
             self.calendarWidgetTab1Function)
         self.calendarWidgetTab1Function()
 
+        self.buttonPrevYearTab1.clicked.connect(
+            self.buttonPrevYearTab1Function)
+        self.buttonNextYearTab1.clicked.connect(
+            self.buttonNextYearTab1Function)
         self.buttonSaveTab1.clicked.connect(self.buttonSaveTab1Function)
         self.buttonResetTab1.clicked.connect(self.buttonResetTab1Function)
         # tab 1 end
 
         # tab 2 start
-        initDate = QDate.currentDate()
+        initDate = QDate(1999, 1, 1)
         initStartDate = QDate(initDate.year(), initDate.month(), 1)
         initEndDate = QDate(
-            initDate.year(), initDate.month(), initDate.daysInMonth())
+            QDate.currentDate().year(), QDate.currentDate().month(), QDate.currentDate().daysInMonth())
         self.inputSearchDateStartTab2.setDate(initStartDate)
         self.inputSearchDateEndTab2.setDate(initEndDate)
+
+        self.inputPriceTab2.textEdited.connect(
+            self.changeInputPriceTab2Function)
 
         self.modelWorkedDataTab2 = QtSql.QSqlQueryModel(self)
         self.buttonSearchTab2Function()
@@ -155,7 +169,7 @@ class WindowClass(QMainWindow, form_class):
         # tab 2 end
 
         # tab 3 start
-        self.inputSearchDateStartTab3.setDate(QDate(2000, 1, 1))
+        self.inputSearchDateStartTab3.setDate(QDate(1999, 1, 1))
         self.inputSearchDateEndTab3.setDate(QDate.currentDate())
 
         self.modelWorkedDataTab3 = QtSql.QSqlQueryModel(self)
@@ -172,7 +186,8 @@ class WindowClass(QMainWindow, form_class):
             self.tableDataTab3.setColumnWidth(i, LIST_HEADER_SIZE_TAB3[i])
 
         self.buttonSearchTab3.clicked.connect(self.buttonSearchTab3Function)
-        self.buttonPrintTab3.clicked.connect(self.buttonPrintTab3Function)
+        # self.buttonPrintTab3.clicked.connect(self.buttonPrintTab3Function)
+        self.buttonPrintTab3.clicked.connect(self.handlePreview)
         # tab 3 end
 
         # tab 4 start
@@ -209,10 +224,33 @@ class WindowClass(QMainWindow, form_class):
         self.inputDateTab1.setText(
             self.calendarWidgetTab1.selectedDate().toString("yyyy-MM-dd"))
 
+    def changeInputPriceTab1Function(self, changeText: str):
+        saveCursorPosition = self.inputPriceTab1.cursorPosition()
+        originLength = len(changeText)
+        listText = list(changeText.replace(',', ''))
+        listSize = len(listText)
+        pos = listSize % 3
+        if listSize < 3:
+            return
+
+        for i in range(listSize, -1, -1):
+            if i % 3 == pos and i != 0 and i != listSize:
+                listText.insert(i, ',')
+        self.inputPriceTab1.setText(''.join(listText))
+
+        self.inputPriceTab1.setCursorPosition(
+            saveCursorPosition + (len(listText) - originLength))
+
+    def buttonPrevYearTab1Function(self):
+        self.calendarWidgetTab1.showPreviousYear()
+
+    def buttonNextYearTab1Function(self):
+        self.calendarWidgetTab1.showNextYear()
+
     def buttonSaveTab1Function(self):
         query = QtSql.QSqlQuery()
         dictInputData = {LIST_COL_WORKED_DATA[1]: self.inputDateTab1.text(), LIST_COL_WORKED_DATA[2]: self.inputCompanyTab1.text(), LIST_COL_WORKED_DATA[3]: self.inputTimeStartTab1.currentText(), LIST_COL_WORKED_DATA[4]: self.inputTimeEndTab1.currentText(),
-                         LIST_COL_WORKED_DATA[5]: self.inputAmountTab1.text(), LIST_COL_WORKED_DATA[6]: self.inputPriceTab1.text(), LIST_COL_WORKED_DATA[7]: self.inputCarTab1.text(), LIST_COL_WORKED_DATA[8]: self.inputCollectTab1.currentText(), LIST_COL_WORKED_DATA[9]: self.inputRemarkTab1.text()}
+                         LIST_COL_WORKED_DATA[5]: self.inputAmountTab1.text(), LIST_COL_WORKED_DATA[6]: self.inputPriceTab1.text().replace(',', ''), LIST_COL_WORKED_DATA[7]: self.inputCarTab1.text(), LIST_COL_WORKED_DATA[8]: self.inputCollectTab1.currentText(), LIST_COL_WORKED_DATA[9]: self.inputRemarkTab1.text()}
 
         insertWorkedData(query, dictInputData)
         self.modelWorkedDataTab1.setQuery(QUERY_SELECT_TAB1)
@@ -220,8 +258,6 @@ class WindowClass(QMainWindow, form_class):
         self.buttonResetTab1.clicked.emit()
 
     def buttonResetTab1Function(self):
-        self.calendarWidgetTab1.setSelectedDate(QDate.currentDate())
-        self.calendarWidgetTab1Function()  # label까지 업데이트
         self.inputCompanyTab1.clear()
         self.inputTimeStartTab1.setCurrentIndex(0)
         self.inputTimeEndTab1.setCurrentIndex(0)
@@ -253,6 +289,23 @@ class WindowClass(QMainWindow, form_class):
         self.tableDataTab2.selectRow(0)
         self.buttonResetTab2.clicked.emit()
 
+    def changeInputPriceTab2Function(self, changeText: str):
+        saveCursorPosition = self.inputPriceTab2.cursorPosition()
+        originLength = len(changeText)
+        listText = list(changeText.replace(',', ''))
+        listSize = len(listText)
+        pos = listSize % 3
+        if listSize < 3:
+            return
+
+        for i in range(listSize, -1, -1):
+            if i % 3 == pos and i != 0 and i != listSize:
+                listText.insert(i, ',')
+        self.inputPriceTab2.setText(''.join(listText))
+
+        self.inputPriceTab2.setCursorPosition(
+            saveCursorPosition + (len(listText) - originLength))
+
     def tableDataTab2Function(self):
         objSelectedCell = self.tableDataTab2.selectedIndexes()[0]
 
@@ -264,8 +317,7 @@ class WindowClass(QMainWindow, form_class):
             objSelectedCell.siblingAtColumn(2).data())
         self.inputCarTab2.setText(
             objSelectedCell.siblingAtColumn(7).data())
-        self.inputPriceTab2.setText(
-            str(objSelectedCell.siblingAtColumn(6).data()).replace(",", ""))
+        self.inputPriceTab2.setText(objSelectedCell.siblingAtColumn(6).data())
 
         idxStartTime = self.inputTimeStartTab2.findText(
             objSelectedCell.siblingAtColumn(3).data(), Qt.MatchFixedString)
@@ -330,7 +382,7 @@ class WindowClass(QMainWindow, form_class):
 
         query = QtSql.QSqlQuery()
         dictInputData = {LIST_COL_WORKED_DATA[1]: self.inputDateTab2.date().toString("yyyy-MM-dd"), LIST_COL_WORKED_DATA[2]: self.inputCompanyTab2.text(), LIST_COL_WORKED_DATA[3]: self.inputTimeStartTab2.currentText(), LIST_COL_WORKED_DATA[4]: self.inputTimeEndTab2.currentText(),
-                         LIST_COL_WORKED_DATA[5]: self.inputAmountTab2.text(), LIST_COL_WORKED_DATA[6]: self.inputPriceTab2.text(), LIST_COL_WORKED_DATA[7]: self.inputCarTab2.text(), LIST_COL_WORKED_DATA[8]: self.inputCollectTab2.currentText(), LIST_COL_WORKED_DATA[9]: self.inputRemarkTab2.text()}
+                         LIST_COL_WORKED_DATA[5]: self.inputAmountTab2.text(), LIST_COL_WORKED_DATA[6]: self.inputPriceTab2.text().replace(",", ''), LIST_COL_WORKED_DATA[7]: self.inputCarTab2.text(), LIST_COL_WORKED_DATA[8]: self.inputCollectTab2.currentText(), LIST_COL_WORKED_DATA[9]: self.inputRemarkTab2.text()}
 
         updateWorkedData(query, selectedRowNumber, dictInputData)
 
@@ -399,6 +451,100 @@ class WindowClass(QMainWindow, form_class):
         else:
             self.inputTotalNoCollectTab3.setText("0")
 
+# 출력 기능 시작
+    def handlePreview(self):
+        dialog = QPrintPreviewDialog()
+        dialog.paintRequested.connect(self.handlePaintRequestHTML)
+        dialog.exec_()
+
+    def handlePaintRequestHTML(self, printer: QPrinter):
+        # printer.setResolution(96) # 글씨 전반적으로 크기 줄이기
+        printer.setPageMargins(12, 16, 12, 16, QPrinter.Millimeter)
+
+        document = QTextDocument()
+        document.setPageSize(QSizeF(printer.pageRect().size()))
+
+        htmlString = list()
+        htmlString.append("<table align='left'>")
+        htmlString.append(" <tr>")
+        htmlString.append(
+            "     <td rowspan='4' width='70%'><h1 align='center'>거래내역서</h1></td>")
+        htmlString.append("     <td width='30%'><h3>마니산펌프카</h3></td>")
+        htmlString.append(" </tr>")
+        htmlString.append(" <tr>")
+        htmlString.append("     <td>TEL.032)934-0080</td>")
+        htmlString.append(" </tr>")
+        htmlString.append(" <tr>")
+        htmlString.append("     <td>FAX.032)934-0081</td>")
+        htmlString.append(" </tr>")
+        htmlString.append(" <tr>")
+        htmlString.append("     <td>H.P.010-5321-0083</td>")
+        htmlString.append(" </tr>")
+        htmlString.append("</table>")
+
+        htmlString.append("<table><tr><td></td></tr></table>")
+
+        htmlString.append(
+            "<table align='right' border=1>")
+        htmlString.append(" <tr>")
+        htmlString.append("     <td align='center'>총매출액</td>")
+        htmlString.append("     <td align='center'>미수금액</td>")
+        htmlString.append("     <td align='center'>수금액</td>")
+        htmlString.append(" </tr>")
+        htmlString.append(" <tr>")
+        htmlString.append("     <td>"+self.inputTotalTab3.text()+"</td>")
+        htmlString.append(
+            "     <td>"+self.inputTotalNoCollectTab3.text()+"</td>")
+        htmlString.append(
+            "     <td>"+self.inputTotalCollectTab3.text()+"</td>")
+        htmlString.append(" </tr>")
+        htmlString.append("</table>")
+
+        htmlString.append("<table><tr><td></td></tr></table>")
+
+        htmlString.append("<table border=1>")
+
+        htmlString.append(" <tr width='100%'>")
+        htmlString.append("     <td align='center'>거래일자</td>")
+        htmlString.append("     <td align='center'>거래처</td>")
+        htmlString.append("     <td align='center'>시작</td>")
+        htmlString.append("     <td align='center'>종료</td>")
+        htmlString.append("     <td align='center'>물량</td>")
+        htmlString.append("     <td align='center'>금액</td>")
+        htmlString.append("     <td align='center'>차량</td>")
+        htmlString.append("     <td align='center'>수금</td>")
+        htmlString.append("     <td align='center'>비고</td>")
+        htmlString.append(" </tr>")
+
+        model = self.modelWorkedDataTab3
+        printIndex = [0, 1, 2, 3, 4, 5, 7, 8, 9]
+        for row in range(model.rowCount()):
+            if row == 27:
+                htmlString.append(" <tr>")
+                htmlString.append("     <td align='center'>거래일자</td>")
+                htmlString.append("     <td align='center'>거래처</td>")
+                htmlString.append("     <td align='center'>시작</td>")
+                htmlString.append("     <td align='center'>종료</td>")
+                htmlString.append("     <td align='center'>물량</td>")
+                htmlString.append("     <td align='center'>금액</td>")
+                htmlString.append("     <td align='center'>차량</td>")
+                htmlString.append("     <td align='center'>수금</td>")
+                htmlString.append("     <td align='center'>비고</td>")
+                htmlString.append(" </tr>")
+
+            htmlString.append(" <tr>")
+            for col in printIndex:
+                data = model.data(model.index(row, col))
+                htmlString.append(
+                    "     <td>"+data+"</td>")
+            htmlString.append(" </tr>")
+
+        htmlString.append("</table>")
+
+        htmlString = ''.join(htmlString)
+        document.setHtml(htmlString)
+        document.print_(printer)
+
     def buttonPrintTab3Function(self):
         # 프린터 생성, 실행
         printer = QPrinter()
@@ -428,6 +574,7 @@ class WindowClass(QMainWindow, form_class):
             self.tableDataTab3.render(qp)
 
             qp.end()
+# 출력 기능 끝
 
     # tab 4 start
 
