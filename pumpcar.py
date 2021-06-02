@@ -8,7 +8,7 @@ from PyQt5.QtPrintSupport import QPrinter, QPrintDialog, QPrintPreviewDialog
 
 VERSION_INFO = " v1.51 정보창 - 2021-06-01"
 UPDATE_INFO = \
-    "v1.51\n출력 시 글자 크기 증가\n출력 창 최대화\n버튼 위치 조정\n\n\
+    "v1.53\n프로그램 실행 시 커서 거래처로\n프로그램 실행 시 한영키 설정\n출력 시 글자 크기 증가\n출력 창 최대화\n버튼 위치 조정\n\n\
 v1.4(2021-06-01)\n출력 기능 베타\n입력창 금액 , 추가(tab1,2)\n이전해/다음해 버튼 추가(tab1)\n\n\
 v1.3(2021-06-01)\n입력 후 날짜 변경 안 되도록 수정\n수정 초기 검색 범위 1999년으로 수정\n총타설량 옆 공백 추가\n\n\
 v1.2(2021-05-31)\n업데이트내역 추가\n총매출액 글씨 겹치는 오류 수정\n금액 수정 시 데이터 날라가는 오류 수정\n시간 입력 방식 수정\n프린트 데모 기능 추가\n\n\
@@ -117,7 +117,7 @@ class WindowClass(QMainWindow, form_class):
             self.tableDataTab1.setColumnWidth(i, LIST_HEADER_SIZE_TAB1[i])
 
         self.inputCompanyTab1.setFocus()
-        pyautogui.press('hanguel')
+        pyautogui.press('hanguel')  # 한영키
         self.inputPriceTab1.textEdited.connect(
             self.changeInputPriceTab1Function)
 
