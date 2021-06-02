@@ -677,7 +677,7 @@
      <widget class="QPushButton" name="buttonNextYearTab1">
       <property name="geometry">
        <rect>
-        <x>870</x>
+        <x>900</x>
         <y>308</y>
         <width>113</width>
         <height>30</height>
@@ -690,7 +690,7 @@
      <widget class="QPushButton" name="buttonPrevYearTab1">
       <property name="geometry">
        <rect>
-        <x>680</x>
+        <x>650</x>
         <y>308</y>
         <width>113</width>
         <height>30</height>

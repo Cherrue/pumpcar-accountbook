@@ -458,7 +458,7 @@ class WindowClass(QMainWindow, form_class):
         dialog.exec_()
 
     def handlePaintRequestHTML(self, printer: QPrinter):
-        # printer.setResolution(96) # 글씨 전반적으로 크기 줄이기
+        printer.setResolution(96)  # 글씨 전반적으로 크기 줄이기
         printer.setPageMargins(12, 16, 12, 16, QPrinter.Millimeter)
 
         document = QTextDocument()
