@@ -1,5 +1,5 @@
 import sys
-import datetime
+import pyautogui
 from PyQt5.QtWidgets import *
 from PyQt5 import uic, QtSql
 from PyQt5.QtCore import Qt, QVariant, QDate, Qt, QSizeF
@@ -116,6 +116,8 @@ class WindowClass(QMainWindow, form_class):
         for i in range(len(LIST_HEADER_SIZE_TAB1)):
             self.tableDataTab1.setColumnWidth(i, LIST_HEADER_SIZE_TAB1[i])
 
+        self.inputCompanyTab1.setFocus()
+        pyautogui.press('hanguel')
         self.inputPriceTab1.textEdited.connect(
             self.changeInputPriceTab1Function)
 
