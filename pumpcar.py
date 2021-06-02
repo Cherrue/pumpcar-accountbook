@@ -504,7 +504,7 @@ class WindowClass(QMainWindow, form_class):
 
         htmlString.append("<table><tr><td></td></tr></table>")
 
-        htmlString.append("<table border=1 cellspacing=0' cellpadding='2'>")
+        htmlString.append("<table border=1 cellspacing=0' cellpadding='0'>")
 
         htmlString.append(" <tr width='100%'>")
         htmlString.append("     <td align='center'>거래일자</td>")
