@@ -40,7 +40,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="iconSize">
      <size>
@@ -508,36 +508,6 @@
         <height>30</height>
        </rect>
       </property>
-      <item>
-       <property name="text">
-        <string>06:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>06:30</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>07:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>07:30</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>08:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>08:30</string>
-       </property>
-      </item>
       <item>
        <property name="text">
         <string>09:00</string>
@@ -1140,36 +1110,6 @@
         <height>30</height>
        </rect>
       </property>
-      <item>
-       <property name="text">
-        <string>06:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>06:30</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>07:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>07:30</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>08:00</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>08:30</string>
-       </property>
-      </item>
       <item>
        <property name="text">
         <string>09:00</string>
