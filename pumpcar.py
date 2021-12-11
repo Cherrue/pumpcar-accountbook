@@ -6,9 +6,10 @@ from PyQt5.QtCore import Qt, QVariant, QDate, Qt, QSizeF
 from PyQt5.QtGui import QTextDocument, QTextCursor, QPainter
 from PyQt5.QtPrintSupport import QPrinter, QPrintDialog, QPrintPreviewDialog
 
-VERSION_INFO = " v1.51 정보창 - 2021-06-01"
+VERSION_INFO = " v1.55 정보창 - 2021-12-11"
 UPDATE_INFO = \
-    "v1.54(2021-11-06)\n종료시간 값  범위 조정(06:00 -> 09:00)\n\n\
+    "v1.55(2021-12-11)\n자료 검색 시작 날짜를 1999-01-01에서 당월 1일로 수정\n\n\
+v1.54(2021-11-06)\n종료시간 값  범위 조정(06:00 -> 09:00)\n\n\
 v1.53(2021-06-02\n프로그램 실행 시 커서 거래처로\n프로그램 실행 시 한영키 설정\n출력 시 글자 크기 증가\n출력 창 최대화\n버튼 위치 조정\n\n\
 v1.4(2021-06-01)\n출력 기능 베타\n입력창 금액 , 추가(tab1,2)\n이전해/다음해 버튼 추가(tab1)\n\n\
 v1.3(2021-06-01)\n입력 후 날짜 변경 안 되도록 수정\n수정 초기 검색 범위 1999년으로 수정\n총타설량 옆 공백 추가\n\n\
@@ -136,7 +137,7 @@ class WindowClass(QMainWindow, form_class):
         # tab 1 end
 
         # tab 2 start
-        initDate = QDate(1999, 1, 1)
+        initDate = QDate.currentDate()
         initStartDate = QDate(initDate.year(), initDate.month(), 1)
         initEndDate = QDate(
             QDate.currentDate().year(), QDate.currentDate().month(), QDate.currentDate().daysInMonth())
@@ -173,7 +174,7 @@ class WindowClass(QMainWindow, form_class):
         # tab 2 end
 
         # tab 3 start
-        self.inputSearchDateStartTab3.setDate(QDate(1999, 1, 1))
+        self.inputSearchDateStartTab3.setDate(initStartDate)
         self.inputSearchDateEndTab3.setDate(QDate.currentDate())
 
         self.modelWorkedDataTab3 = QtSql.QSqlQueryModel(self)
