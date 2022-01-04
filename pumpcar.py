@@ -138,7 +138,7 @@ class WindowClass(QMainWindow, form_class):
 
         # tab 2 start
         initDate = QDate.currentDate()
-        initStartDate = QDate(initDate.year(), initDate.month(), 1)
+        initStartDate = QDate(initDate.year(), 1, 1)
         initEndDate = QDate(
             QDate.currentDate().year(), QDate.currentDate().month(), QDate.currentDate().daysInMonth())
         self.inputSearchDateStartTab2.setDate(initStartDate)
