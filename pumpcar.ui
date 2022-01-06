@@ -63,7 +63,7 @@
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>3</number>
         </property>
         <property name="iconSize">
          <size>
@@ -75,624 +75,624 @@
          <attribute name="title">
           <string>신규자료 입력</string>
          </attribute>
-         <widget class="QCalendarWidget" name="calendarWidgetTab1">
-          <property name="geometry">
-           <rect>
-            <x>400</x>
-            <y>310</y>
-            <width>860</width>
-            <height>300</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="inputCompanyTab1">
-          <property name="geometry">
-           <rect>
-            <x>200</x>
-            <y>110</y>
-            <width>180</width>
-            <height>30</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="buttonSaveTab1">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>500</y>
-            <width>160</width>
-            <height>60</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>입력</string>
-          </property>
-          <property name="autoDefault">
-           <bool>false</bool>
-          </property>
-          <property name="default">
-           <bool>false</bool>
-          </property>
-          <property name="flat">
-           <bool>false</bool>
-          </property>
-         </widget>
-         <widget class="QLabel" name="inputDateTab1">
-          <property name="geometry">
-           <rect>
-            <x>200</x>
-            <y>55</y>
-            <width>200</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>0000-00-00</string>
-          </property>
-         </widget>
-         <widget class="QTableView" name="tableDataTab1">
-          <property name="geometry">
-           <rect>
-            <x>400</x>
-            <y>0</y>
-            <width>860</width>
-            <height>300</height>
-           </rect>
-          </property>
-          <property name="editTriggers">
-           <set>QAbstractItemView::NoEditTriggers</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelDateTab1">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>55</y>
-            <width>120</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>거 래 일 자</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelCompanyTab1">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>110</y>
-            <width>120</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>거 래 처</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelCarTab1">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>165</y>
-            <width>120</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>차 량</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelPriceTab1">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>220</y>
-            <width>120</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>금 액</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelTimeTab1">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>275</y>
-            <width>120</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>시 간</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelCollectTab1">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>330</y>
-            <width>120</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>수 금</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelAmountTab1">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>385</y>
-            <width>120</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>타 설 량</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelRemarkTab1">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>440</y>
-            <width>120</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>비 고</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="inputCarTab1">
-          <property name="geometry">
-           <rect>
-            <x>200</x>
-            <y>165</y>
-            <width>180</width>
-            <height>30</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="inputPriceTab1">
-          <property name="geometry">
-           <rect>
-            <x>200</x>
-            <y>220</y>
-            <width>180</width>
-            <height>30</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="inputCollectTab1">
-          <property name="geometry">
-           <rect>
-            <x>200</x>
-            <y>330</y>
-            <width>180</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <item>
-           <property name="text">
-            <string>미수</string>
-           </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="0" column="1" colspan="2">
+             <widget class="QLabel" name="inputDateTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>0000-00-00</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1" colspan="2">
+             <widget class="QLineEdit" name="inputRemarkTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="labelCompanyTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>거 래 처</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="labelTimeTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>시 간</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="labelCollectTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>수 금</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="labelRemarkTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>비 고</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1" colspan="2">
+             <widget class="QLineEdit" name="inputPriceTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1" colspan="2">
+             <widget class="QComboBox" name="inputCollectTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <item>
+               <property name="text">
+                <string>미수</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>수금</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="labelCarTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>차 량</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" colspan="2">
+             <widget class="QLineEdit" name="inputCompanyTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QComboBox" name="inputTimeEndTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <item>
+               <property name="text">
+                <string>09:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>09:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>10:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>10:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>11:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>11:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>12:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>12:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>13:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>13:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>14:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>14:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>15:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>15:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>16:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>16:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>17:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>17:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>18:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>18:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>19:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>19:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>20:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>20:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>21:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>21:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>22:00</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="6" column="1" colspan="2">
+             <widget class="QLineEdit" name="inputAmountTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="labelDateTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>거 래 일 자</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QComboBox" name="inputTimeStartTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <item>
+               <property name="text">
+                <string>06:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>06:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>07:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>07:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>08:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>08:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>09:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>09:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>10:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>10:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>11:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>11:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>12:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>12:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>13:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>13:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>14:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>14:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>15:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>15:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>16:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>16:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>17:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>17:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>18:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>18:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>19:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>19:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>20:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>20:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>21:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>21:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>22:00</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="labelPriceTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>금 액</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1" colspan="2">
+             <widget class="QLineEdit" name="inputCarTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="labelAmountTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>타 설 량</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3" rowspan="4" colspan="2">
+             <widget class="QTableView" name="tableDataTab1">
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="3">
+             <widget class="QPushButton" name="buttonPrevYearTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>이전년도</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="4">
+             <widget class="QPushButton" name="buttonNextYearTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>다음년도</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="3" rowspan="4" colspan="2">
+             <widget class="QCalendarWidget" name="calendarWidgetTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QPushButton" name="buttonSaveTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>입력</string>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="default">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="1">
+             <widget class="QPushButton" name="buttonResetTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>초기화</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
-          <item>
-           <property name="text">
-            <string>수금</string>
-           </property>
-          </item>
-         </widget>
-         <widget class="QLineEdit" name="inputAmountTab1">
-          <property name="geometry">
-           <rect>
-            <x>200</x>
-            <y>385</y>
-            <width>180</width>
-            <height>30</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="inputRemarkTab1">
-          <property name="geometry">
-           <rect>
-            <x>200</x>
-            <y>440</y>
-            <width>180</width>
-            <height>30</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="buttonResetTab1">
-          <property name="geometry">
-           <rect>
-            <x>200</x>
-            <y>500</y>
-            <width>150</width>
-            <height>60</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>초기화</string>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="inputTimeStartTab1">
-          <property name="geometry">
-           <rect>
-            <x>200</x>
-            <y>275</y>
-            <width>90</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <item>
-           <property name="text">
-            <string>06:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>06:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>07:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>07:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>08:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>08:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>09:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>09:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>10:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>10:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>11:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>11:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>12:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>12:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>13:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>13:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>14:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>14:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>15:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>15:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>16:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>16:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>17:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>17:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>18:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>18:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>19:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>19:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>20:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>20:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>21:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>21:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>22:00</string>
-           </property>
-          </item>
-         </widget>
-         <widget class="QComboBox" name="inputTimeEndTab1">
-          <property name="geometry">
-           <rect>
-            <x>295</x>
-            <y>275</y>
-            <width>90</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <item>
-           <property name="text">
-            <string>09:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>09:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>10:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>10:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>11:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>11:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>12:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>12:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>13:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>13:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>14:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>14:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>15:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>15:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>16:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>16:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>17:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>17:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>18:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>18:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>19:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>19:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>20:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>20:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>21:00</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>21:30</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>22:00</string>
-           </property>
-          </item>
-         </widget>
-         <widget class="QPushButton" name="buttonNextYearTab1">
-          <property name="geometry">
-           <rect>
-            <x>900</x>
-            <y>310</y>
-            <width>113</width>
-            <height>23</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>다음년도</string>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="buttonPrevYearTab1">
-          <property name="geometry">
-           <rect>
-            <x>650</x>
-            <y>310</y>
-            <width>113</width>
-            <height>23</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>이전년도</string>
-          </property>
-         </widget>
+         </layout>
         </widget>
         <widget class="QWidget" name="tab2ModifyData">
          <attribute name="title">
@@ -1452,358 +1452,217 @@
          <attribute name="title">
           <string>자료검색 및 출력</string>
          </attribute>
-         <widget class="QLineEdit" name="inputSearchRemarkTab3">
-          <property name="geometry">
-           <rect>
-            <x>1070</x>
-            <y>540</y>
-            <width>180</width>
-            <height>30</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QDateEdit" name="inputSearchDateEndTab3">
-          <property name="geometry">
-           <rect>
-            <x>180</x>
-            <y>540</y>
-            <width>135</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="calendarPopup">
-           <bool>true</bool>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelSearchRemarkTab3">
-          <property name="geometry">
-           <rect>
-            <x>1020</x>
-            <y>540</y>
-            <width>50</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>현장 :</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelSearchDateTab3">
-          <property name="geometry">
-           <rect>
-            <x>160</x>
-            <y>540</y>
-            <width>15</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>~</string>
-          </property>
-         </widget>
-         <widget class="QTableView" name="tableDataTab3">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>1276</width>
-            <height>531</height>
-           </rect>
-          </property>
-          <property name="editTriggers">
-           <set>QAbstractItemView::NoEditTriggers</set>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="buttonSearchTab3">
-          <property name="geometry">
-           <rect>
-            <x>1070</x>
-            <y>575</y>
-            <width>90</width>
-            <height>40</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>검색</string>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="inputSearchCollectTab3">
-          <property name="geometry">
-           <rect>
-            <x>340</x>
-            <y>540</y>
-            <width>80</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <item>
-           <property name="text">
-            <string>전체</string>
-           </property>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_7">
+            <item row="2" column="11">
+             <widget class="QPushButton" name="buttonPrintTab3">
+              <property name="text">
+               <string>출력</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="6">
+             <widget class="QLabel" name="labelTotalCollectTab3">
+              <property name="text">
+               <string>수금액 :</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="3">
+             <widget class="QLabel" name="inputTotalTab3">
+              <property name="text">
+               <string>1000000000</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLabel" name="inputRowNoTab3">
+              <property name="text">
+               <string>10000000</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <widget class="QLabel" name="labelSearchCompanyTab3">
+              <property name="text">
+               <string>거래처 :</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="5">
+             <widget class="QLabel" name="inputTotalNoCollectTab3">
+              <property name="text">
+               <string>100000000</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="labelRowNoTab3">
+              <property name="text">
+               <string>출력데이터 - </string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QDateEdit" name="inputSearchDateEndTab3">
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="9">
+             <widget class="QLabel" name="inputTotalAmountTab3">
+              <property name="text">
+               <string>100000</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="labelSearchDateTab3">
+              <property name="text">
+               <string>~</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="8">
+             <widget class="QLabel" name="labelTotalAmountTab3">
+              <property name="text">
+               <string>총타설량 :</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="10">
+             <widget class="QPushButton" name="buttonSearchTab3">
+              <property name="text">
+               <string>검색</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QLabel" name="labelTotalTab3">
+              <property name="text">
+               <string>총매출액 :</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="4">
+             <widget class="QLabel" name="labelTotalNoCollectTab3">
+              <property name="text">
+               <string>미수금 :</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="7">
+             <widget class="QLabel" name="inputTotalCollectTab3">
+              <property name="text">
+               <string>1000000000</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QDateEdit" name="inputSearchDateStartTab3">
+              <property name="dateTime">
+               <datetime>
+                <hour>0</hour>
+                <minute>0</minute>
+                <second>0</second>
+                <year>9999</year>
+                <month>12</month>
+                <day>31</day>
+               </datetime>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QComboBox" name="inputSearchCollectTab3">
+              <item>
+               <property name="text">
+                <string>전체</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>미수</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>수금</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="10" colspan="2">
+             <widget class="QLineEdit" name="inputSearchRemarkTab3"/>
+            </item>
+            <item row="1" column="9">
+             <widget class="QLabel" name="labelSearchRemarkTab3">
+              <property name="text">
+               <string>현장 :</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="8">
+             <widget class="QLineEdit" name="inputSearchCarTab3"/>
+            </item>
+            <item row="1" column="7">
+             <widget class="QLabel" name="labelSearchCompanyTab3_2">
+              <property name="text">
+               <string>차량 :</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="5" colspan="2">
+             <widget class="QLineEdit" name="inputSearchCompanyTab3"/>
+            </item>
+            <item row="0" column="0" colspan="12">
+             <widget class="QTableView" name="tableDataTab3">
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
-          <item>
-           <property name="text">
-            <string>미수</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>수금</string>
-           </property>
-          </item>
-         </widget>
-         <widget class="QDateEdit" name="inputSearchDateStartTab3">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>540</y>
-            <width>135</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="dateTime">
-           <datetime>
-            <hour>0</hour>
-            <minute>0</minute>
-            <second>0</second>
-            <year>9999</year>
-            <month>12</month>
-            <day>31</day>
-           </datetime>
-          </property>
-          <property name="calendarPopup">
-           <bool>true</bool>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelRowNoTab3">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>580</y>
-            <width>110</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>출력데이터 - </string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="inputRowNoTab3">
-          <property name="geometry">
-           <rect>
-            <x>130</x>
-            <y>580</y>
-            <width>120</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>10000000</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelTotalTab3">
-          <property name="geometry">
-           <rect>
-            <x>250</x>
-            <y>580</y>
-            <width>90</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>총매출액 :</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="inputTotalTab3">
-          <property name="geometry">
-           <rect>
-            <x>340</x>
-            <y>580</y>
-            <width>130</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>1000000000</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelTotalNoCollectTab3">
-          <property name="geometry">
-           <rect>
-            <x>470</x>
-            <y>580</y>
-            <width>70</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>미수금 :</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="inputTotalNoCollectTab3">
-          <property name="geometry">
-           <rect>
-            <x>540</x>
-            <y>580</y>
-            <width>130</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>100000000</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelTotalCollectTab3">
-          <property name="geometry">
-           <rect>
-            <x>670</x>
-            <y>580</y>
-            <width>70</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>수금액 :</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="inputTotalCollectTab3">
-          <property name="geometry">
-           <rect>
-            <x>740</x>
-            <y>580</y>
-            <width>130</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>1000000000</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelSearchCompanyTab3">
-          <property name="geometry">
-           <rect>
-            <x>460</x>
-            <y>540</y>
-            <width>70</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>거래처 :</string>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="inputSearchCompanyTab3">
-          <property name="geometry">
-           <rect>
-            <x>530</x>
-            <y>540</y>
-            <width>180</width>
-            <height>30</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelSearchCompanyTab3_2">
-          <property name="geometry">
-           <rect>
-            <x>750</x>
-            <y>540</y>
-            <width>50</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>차량 :</string>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="inputSearchCarTab3">
-          <property name="geometry">
-           <rect>
-            <x>800</x>
-            <y>540</y>
-            <width>180</width>
-            <height>30</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="buttonPrintTab3">
-          <property name="geometry">
-           <rect>
-            <x>1170</x>
-            <y>575</y>
-            <width>90</width>
-            <height>40</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>출력</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="inputTotalAmountTab3">
-          <property name="geometry">
-           <rect>
-            <x>950</x>
-            <y>580</y>
-            <width>120</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>100000</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="labelTotalAmountTab3">
-          <property name="geometry">
-           <rect>
-            <x>870</x>
-            <y>580</y>
-            <width>70</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>총타설량 :</string>
-          </property>
-         </widget>
+         </layout>
         </widget>
         <widget class="QWidget" name="tab4BadCompany">
          <attribute name="title">
           <string>악덕업체관리</string>
          </attribute>
-         <widget class="QPushButton" name="buttonBlackTab4">
-          <property name="geometry">
-           <rect>
-            <x>1080</x>
-            <y>560</y>
-            <width>150</width>
-            <height>50</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>악덕업체 탈출</string>
-          </property>
-          <property name="autoDefault">
-           <bool>false</bool>
-          </property>
-          <property name="default">
-           <bool>false</bool>
-          </property>
-          <property name="flat">
-           <bool>false</bool>
-          </property>
-         </widget>
-         <widget class="QTableView" name="tableDataTab4">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>1276</width>
-            <height>551</height>
-           </rect>
-          </property>
-          <property name="editTriggers">
-           <set>QAbstractItemView::NoEditTriggers</set>
-          </property>
-         </widget>
+         <layout class="QGridLayout" name="gridLayout_10">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_9">
+            <item row="0" column="0">
+             <widget class="QTableView" name="tableDataTab4">
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="buttonBlackTab4">
+              <property name="text">
+               <string>악덕업체 탈출</string>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="default">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </widget>
        </widget>
       </item>
@@ -1824,8 +1683,6 @@
   <tabstop>inputAmountTab1</tabstop>
   <tabstop>inputRemarkTab1</tabstop>
   <tabstop>buttonSaveTab1</tabstop>
-  <tabstop>buttonResetTab1</tabstop>
-  <tabstop>calendarWidgetTab1</tabstop>
   <tabstop>tableDataTab2</tabstop>
   <tabstop>inputDateTab2</tabstop>
   <tabstop>inputCompanyTab2</tabstop>
@@ -1850,9 +1707,6 @@
   <tabstop>inputSearchDateEndTab3</tabstop>
   <tabstop>inputSearchCollectTab3</tabstop>
   <tabstop>inputSearchCompanyTab3</tabstop>
-  <tabstop>inputSearchCarTab3</tabstop>
-  <tabstop>inputSearchRemarkTab3</tabstop>
-  <tabstop>buttonSearchTab3</tabstop>
   <tabstop>buttonPrintTab3</tabstop>
   <tabstop>buttonBlackTab4</tabstop>
   <tabstop>tableDataTab4</tabstop>
