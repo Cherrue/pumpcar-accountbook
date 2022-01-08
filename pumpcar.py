@@ -6,7 +6,7 @@ from PyQt5.QtCore import Qt, QVariant, QDate, Qt, QSizeF
 from PyQt5.QtGui import QTextDocument, QTextCursor, QPainter
 from PyQt5.QtPrintSupport import QPrinter, QPrintDialog, QPrintPreviewDialog
 
-VERSION_INFO = " v1.55 정보창 - 2021-12-11"
+VERSION_INFO = " v1.56 정보창 - 2022-01-08"
 UPDATE_INFO = \
     "v1.56(2022-01-04)\n자료 수정 탭 검색 시작 날짜 당해 1월1일로 변경\n\n\
 v1.55(2021-12-11)\n자료 검색 시작 날짜를 1999-01-01에서 당월 1일로 수정\n\n\
