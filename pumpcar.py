@@ -15,7 +15,7 @@ v1.53(2021-06-02\n프로그램 실행 시 커서 거래처로\n프로그램 실�
 v1.4(2021-06-01)\n출력 기능 베타\n입력창 금액 , 추가(tab1,2)\n이전해/다음해 버튼 추가(tab1)\n\n\
 v1.3(2021-06-01)\n입력 후 날짜 변경 안 되도록 수정\n수정 초기 검색 범위 1999년으로 수정\n총타설량 옆 공백 추가\n\n\
 v1.2(2021-05-31)\n업데이트내역 추가\n총매출액 글씨 겹치는 오류 수정\n금액 수정 시 데이터 날라가는 오류 수정\n시간 입력 방식 수정\n프린트 데모 기능 추가\n\n\
-v1.1(2021-05-30)\n창 켜자마자 최대화\n탭 입력 시 폼 포커스 순서 변경\n금액에 , 추가\n입력 버튼 클릭 시 거래처로 커서\n총타설량 추가(조회탭)\n글씨체 전반적으로 굵게 변경\n\n\
+v1.1(2021-05-30)\n창 켜자마자 최대화\n탭 입력 시 폼 포커스 순서 변경\n금액에 , 추가\n입력 버튼 클릭 시 거래처로 커서\n총타설량 추가(조회탭)\n글씨체 전반적으로 굵게 변경\n\n\
 v1.0(2021-05-25)\n최초개발"
 
 # UI파일 연결
@@ -95,6 +95,11 @@ def updateWorkedData(query, row_no, dict_data: dict):
 
 
 class WindowClass(QMainWindow, form_class):
+    def eventFilter(self, obj, event):
+        if (event.type() == QtCore.QEvent.Resize):
+            print("hello")
+        return super().eventFilter(obj, event)
+
     def __init__(self):
         super().__init__()
         self.setupUi(self)
