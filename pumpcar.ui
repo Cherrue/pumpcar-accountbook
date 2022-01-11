@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1647</width>
-    <height>794</height>
+    <width>1355</width>
+    <height>786</height>
    </rect>
   </property>
   <property name="font">
@@ -81,7 +81,7 @@
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>0</number>
         </property>
         <property name="iconSize">
          <size>

@@ -1,7 +1,7 @@
 import sys
 import pyautogui
 from PyQt5.QtWidgets import *
-from PyQt5 import uic, QtSql
+from PyQt5 import uic, QtSql, QtCore
 from PyQt5.QtCore import Qt, QVariant, QDate, Qt, QSizeF
 from PyQt5.QtGui import QTextDocument, QTextCursor, QPainter
 from PyQt5.QtPrintSupport import QPrinter, QPrintDialog, QPrintPreviewDialog
@@ -95,16 +95,43 @@ def updateWorkedData(query, row_no, dict_data: dict):
 
 
 class WindowClass(QMainWindow, form_class):
-    def eventFilter(self, obj, event):
-        if (event.type() == QtCore.QEvent.Resize):
-            print("hello")
-        return super().eventFilter(obj, event)
+    resized = QtCore.pyqtSignal()
+
+    def resizeEvent(self, event):
+        self.resized.emit()
+        return super(WindowClass, self).resizeEvent(event)
+
+    def someFunction(self):
+        tabIdx = self.tabWidgetMain.currentIndex()
+        if tabIdx == 0:
+            showingTable = self.tableDataTab1
+            listHeaderSize = LIST_HEADER_SIZE_TAB1
+            standardSize = 860
+        elif tabIdx == 1:
+            showingTable = self.tableDataTab2
+            listHeaderSize = LIST_HEADER_SIZE_TAB2
+            standardSize = 860
+        elif tabIdx == 2:
+            showingTable = self.tableDataTab3
+            listHeaderSize = LIST_HEADER_SIZE_TAB3
+            standardSize = 1276
+        elif tabIdx == 3:
+            showingTable = self.tableDataTab4
+            listHeaderSize = LIST_HEADER_SIZE_TAB4
+            standardSize = 1276
+        print(showingTable.frameGeometry().width())
+        for i in range(len(listHeaderSize)):
+            sizeRatio = showingTable.frameGeometry().width() / standardSize
+            showingTable.setColumnWidth(
+                i, listHeaderSize[i] * sizeRatio)
 
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.resized.connect(self.someFunction)
 
         self.showMaximized()
+        self.someFunction()
 
         self.tabWidgetMain.currentChanged.connect(
             self.tabWidgetMainChangeFunction)
@@ -226,6 +253,7 @@ class WindowClass(QMainWindow, form_class):
             self.buttonSearchTab3.clicked.emit()
         elif _index == 3:
             self.modelWorkedDataTab4.setQuery(QUERY_SELECT_TAB4)
+        self.someFunction()
 
     def buttonUpdatedInfoFunction(self):
         QMessageBox.about(self, VERSION_INFO, UPDATE_INFO)
