@@ -97,41 +97,12 @@ def updateWorkedData(query, row_no, dict_data: dict):
 class WindowClass(QMainWindow, form_class):
     resized = QtCore.pyqtSignal()
 
-    def resizeEvent(self, event):
-        self.resized.emit()
-        return super(WindowClass, self).resizeEvent(event)
-
-    def someFunction(self):
-        tabIdx = self.tabWidgetMain.currentIndex()
-        if tabIdx == 0:
-            showingTable = self.tableDataTab1
-            listHeaderSize = LIST_HEADER_SIZE_TAB1
-            standardSize = 860
-        elif tabIdx == 1:
-            showingTable = self.tableDataTab2
-            listHeaderSize = LIST_HEADER_SIZE_TAB2
-            standardSize = 860
-        elif tabIdx == 2:
-            showingTable = self.tableDataTab3
-            listHeaderSize = LIST_HEADER_SIZE_TAB3
-            standardSize = 1276
-        elif tabIdx == 3:
-            showingTable = self.tableDataTab4
-            listHeaderSize = LIST_HEADER_SIZE_TAB4
-            standardSize = 1276
-        print(showingTable.frameGeometry().width())
-        for i in range(len(listHeaderSize)):
-            sizeRatio = showingTable.frameGeometry().width() / standardSize
-            showingTable.setColumnWidth(
-                i, listHeaderSize[i] * sizeRatio)
-
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.resized.connect(self.someFunction)
+        self.resized.connect(self.setTableDataHeaderSize)
 
         self.showMaximized()
-        self.someFunction()
 
         self.tabWidgetMain.currentChanged.connect(
             self.tabWidgetMainChangeFunction)
@@ -244,6 +215,38 @@ class WindowClass(QMainWindow, form_class):
 
         self.buttonBlackTab4.clicked.connect(self.buttonBlackTab4Function)
 
+        self.setTableDataHeaderSize()
+
+    def resizeEvent(self, event):
+        self.resized.emit()
+        return super(WindowClass, self).resizeEvent(event)
+
+    # @See resizeEvent
+    # 화면 크기 변경 시 table data header 크기를 비율에 맞추어 변경하는 함수
+    def setTableDataHeaderSize(self):
+        tabIdx = self.tabWidgetMain.currentIndex()
+        if tabIdx == 0:
+            showingTable = self.tableDataTab1
+            listHeaderSize = LIST_HEADER_SIZE_TAB1
+            standardSize = 860
+        elif tabIdx == 1:
+            showingTable = self.tableDataTab2
+            listHeaderSize = LIST_HEADER_SIZE_TAB2
+            standardSize = 860
+        elif tabIdx == 2:
+            showingTable = self.tableDataTab3
+            listHeaderSize = LIST_HEADER_SIZE_TAB3
+            standardSize = 1276
+        elif tabIdx == 3:
+            showingTable = self.tableDataTab4
+            listHeaderSize = LIST_HEADER_SIZE_TAB4
+            standardSize = 1276
+        # print(showingTable.frameGeometry().width())
+        for i in range(len(listHeaderSize)):
+            sizeRatio = showingTable.frameGeometry().width() / standardSize
+            showingTable.setColumnWidth(
+                i, listHeaderSize[i] * sizeRatio)
+
     def tabWidgetMainChangeFunction(self, _index):
         if _index == 0:
             self.modelWorkedDataTab1.setQuery(QUERY_SELECT_TAB1)
@@ -253,7 +256,7 @@ class WindowClass(QMainWindow, form_class):
             self.buttonSearchTab3.clicked.emit()
         elif _index == 3:
             self.modelWorkedDataTab4.setQuery(QUERY_SELECT_TAB4)
-        self.someFunction()
+        self.setTableDataHeaderSize()
 
     def buttonUpdatedInfoFunction(self):
         QMessageBox.about(self, VERSION_INFO, UPDATE_INFO)
