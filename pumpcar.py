@@ -215,6 +215,7 @@ class WindowClass(QMainWindow, form_class):
 
         self.buttonBlackTab4.clicked.connect(self.buttonBlackTab4Function)
 
+        # update table header size
         self.setTableDataHeaderSize()
 
     def resizeEvent(self, event):
@@ -245,7 +246,7 @@ class WindowClass(QMainWindow, form_class):
         for i in range(len(listHeaderSize)):
             sizeRatio = showingTable.frameGeometry().width() / standardSize
             showingTable.setColumnWidth(
-                i, listHeaderSize[i] * sizeRatio)
+                i, int(listHeaderSize[i] * sizeRatio))
 
     def tabWidgetMainChangeFunction(self, _index):
         if _index == 0:
