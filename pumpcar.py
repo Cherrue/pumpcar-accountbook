@@ -102,7 +102,7 @@ class WindowClass(QMainWindow, form_class):
         self.setupUi(self)
         self.resized.connect(self.setTableDataHeaderSize)
 
-        self.showMaximized()
+        # self.showMaximized()
 
         self.tabWidgetMain.currentChanged.connect(
             self.tabWidgetMainChangeFunction)
@@ -128,10 +128,16 @@ class WindowClass(QMainWindow, form_class):
             self.changeInputPriceTab1Function)
 
         self.calendarWidgetTab1.setGridVisible(True)
+        self.calendarWidgetTab1.currentPageChanged.connect(
+            lambda: self.calendarWidgetTab1.customEvent())
         self.calendarWidgetTab1.clicked.connect(
             self.calendarWidgetTab1Function)
         self.calendarWidgetTab1Function()
 
+        # calendar navigation init
+        self.inputCalendarMonthTab1.setCurrentIndex(
+            QDate.currentDate().month()-1)
+        self.inputCalendarYearTab1.setValue(QDate.currentDate().year())
         self.buttonPrevYearTab1.clicked.connect(
             self.buttonPrevYearTab1Function)
         self.buttonNextYearTab1.clicked.connect(

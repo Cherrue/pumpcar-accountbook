@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1355</width>
-    <height>786</height>
+    <height>792</height>
    </rect>
   </property>
   <property name="font">
@@ -95,251 +95,11 @@
          </attribute>
          <layout class="QGridLayout" name="gridLayout_6">
           <item row="0" column="0">
-           <layout class="QGridLayout" name="gridLayout_5" rowstretch="5,1,1,1,1,1,1,1,1,2,5" columnstretch="12,10,10,43,43">
-            <item row="3" column="0">
-             <widget class="QLabel" name="labelCarTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>120</width>
-                <height>30</height>
-               </size>
-              </property>
+           <layout class="QGridLayout" name="gridLayout_5" rowstretch="5,0,0,0,0,0,0,0,0,0,0" columnstretch="12,0,0,0,0">
+            <item row="10" column="0" colspan="3">
+             <widget class="QLabel" name="emptySpace2Tab1">
               <property name="text">
-               <string>차 량</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="labelDateTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>120</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>거 래 일 자</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1" colspan="2">
-             <widget class="QLineEdit" name="inputCompanyTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>180</width>
-                <height>30</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item row="6" column="1" colspan="2">
-             <widget class="QComboBox" name="inputCollectTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>180</width>
-                <height>30</height>
-               </size>
-              </property>
-              <item>
-               <property name="text">
-                <string>미수</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>수금</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item row="6" column="0">
-             <widget class="QLabel" name="labelCollectTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>120</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>수 금</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1" colspan="2">
-             <widget class="QLabel" name="inputDateTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>200</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>0000-00-00</string>
-              </property>
-             </widget>
-            </item>
-            <item row="7" column="1" colspan="2">
-             <widget class="QLineEdit" name="inputAmountTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>180</width>
-                <height>30</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item row="7" column="0">
-             <widget class="QLabel" name="labelAmountTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>120</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>타 설 량</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="9" column="0">
-             <widget class="QPushButton" name="buttonSaveTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>120</width>
-                <height>60</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>입력</string>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-              <property name="default">
-               <bool>false</bool>
-              </property>
-              <property name="flat">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1" colspan="2">
-             <widget class="QLineEdit" name="inputCarTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>180</width>
-                <height>30</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="4">
-             <widget class="QPushButton" name="buttonNextYearTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>다음년도</string>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="3">
-             <widget class="QPushButton" name="buttonPrevYearTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>이전년도</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -356,262 +116,6 @@
                 <width>180</width>
                 <height>30</height>
                </size>
-              </property>
-             </widget>
-            </item>
-            <item row="9" column="1">
-             <widget class="QPushButton" name="buttonResetTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>160</width>
-                <height>60</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>초기화</string>
-              </property>
-             </widget>
-            </item>
-            <item row="8" column="1" colspan="2">
-             <widget class="QLineEdit" name="inputRemarkTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>180</width>
-                <height>30</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="0" colspan="3">
-             <widget class="QLabel" name="emptySpace1Tab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="0">
-             <widget class="QLabel" name="labelPriceTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>120</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>금 액</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="8" column="0">
-             <widget class="QLabel" name="labelRemarkTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>120</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>비 고</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="2">
-             <widget class="QComboBox" name="inputTimeEndTab1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>90</width>
-                <height>30</height>
-               </size>
-              </property>
-              <item>
-               <property name="text">
-                <string>09:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>09:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>10:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>10:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>11:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>11:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>12:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>12:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>13:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>13:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>14:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>14:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>15:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>15:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>16:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>16:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>17:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>17:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>18:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>18:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>19:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>19:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>20:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>20:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>21:00</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>21:30</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>22:00</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item row="0" column="3" rowspan="5" colspan="2">
-             <widget class="QTableView" name="tableDataTab1">
-              <property name="minimumSize">
-               <size>
-                <width>860</width>
-                <height>300</height>
-               </size>
-              </property>
-              <property name="editTriggers">
-               <set>QAbstractItemView::NoEditTriggers</set>
               </property>
              </widget>
             </item>
@@ -821,6 +325,190 @@
               </property>
              </widget>
             </item>
+            <item row="3" column="1" colspan="2">
+             <widget class="QLineEdit" name="inputCarTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>180</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1" colspan="2">
+             <widget class="QLineEdit" name="inputAmountTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>180</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QPushButton" name="buttonSaveTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>입력</string>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="default">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="3">
+             <widget class="QLabel" name="emptySpace1Tab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1" colspan="2">
+             <widget class="QComboBox" name="inputCollectTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>180</width>
+                <height>30</height>
+               </size>
+              </property>
+              <item>
+               <property name="text">
+                <string>미수</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>수금</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="labelCarTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>차 량</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="labelCollectTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>수 금</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QPushButton" name="buttonResetTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>160</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>초기화</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="labelDateTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>거 래 일 자</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
             <item row="5" column="0">
              <widget class="QLabel" name="labelTimeTab1">
               <property name="sizePolicy">
@@ -843,15 +531,289 @@
               </property>
              </widget>
             </item>
-            <item row="10" column="0" colspan="3">
-             <widget class="QLabel" name="emptySpace2Tab1">
+            <item row="4" column="0">
+             <widget class="QLabel" name="labelPriceTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>30</height>
+               </size>
+              </property>
               <property name="text">
-               <string/>
+               <string>금 액</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
               </property>
              </widget>
             </item>
-            <item row="6" column="3" rowspan="5" colspan="2">
-             <widget class="QCalendarWidget" name="calendarWidgetTab1">
+            <item row="7" column="0">
+             <widget class="QLabel" name="labelAmountTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>타 설 량</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" colspan="2">
+             <widget class="QLabel" name="inputDateTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>0000-00-00</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="labelRemarkTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>120</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>비 고</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="2">
+             <widget class="QComboBox" name="inputTimeEndTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>30</height>
+               </size>
+              </property>
+              <item>
+               <property name="text">
+                <string>09:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>09:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>10:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>10:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>11:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>11:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>12:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>12:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>13:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>13:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>14:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>14:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>15:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>15:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>16:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>16:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>17:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>17:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>18:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>18:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>19:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>19:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>20:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>20:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>21:00</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>21:30</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>22:00</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="8" column="1" colspan="2">
+             <widget class="QLineEdit" name="inputRemarkTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>180</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1" colspan="2">
+             <widget class="QLineEdit" name="inputCompanyTab1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>180</width>
+                <height>30</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3" rowspan="5">
+             <widget class="QTableView" name="tableDataTab1">
+              <property name="minimumSize">
+               <size>
+                <width>860</width>
+                <height>300</height>
+               </size>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="3" rowspan="5">
+             <widget class="YearButtonCalendarWidget" name="calendarWidgetTab1">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                 <horstretch>0</horstretch>
@@ -865,6 +827,125 @@
                </size>
               </property>
              </widget>
+            </item>
+            <item row="5" column="3">
+             <layout class="QHBoxLayout" name="layoutCalendarNavigation">
+              <item>
+               <widget class="QPushButton" name="buttonPrevYearTab1">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>이전년도</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="inputCalendarMonthTab1">
+                <item>
+                 <property name="text">
+                  <string>1월</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>2월</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>3월</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>4월</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>5월</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>6월</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>7월</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>8월</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>9월</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>10월</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>11월</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>12월</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="inputCalendarYearTab1">
+                <property name="minimum">
+                 <number>1900</number>
+                </property>
+                <property name="maximum">
+                 <number>2100</number>
+                </property>
+                <property name="value">
+                 <number>2022</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="buttonNextYearTab1">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>다음년도</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
            </layout>
           </item>
@@ -2238,6 +2319,13 @@
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>YearButtonCalendarWidget</class>
+   <extends>QCalendarWidget</extends>
+   <header>yearbuttoncalendarwidget</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>tabWidgetMain</tabstop>
   <tabstop>tableDataTab1</tabstop>
