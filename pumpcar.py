@@ -128,16 +128,18 @@ class WindowClass(QMainWindow, form_class):
             self.changeInputPriceTab1Function)
 
         self.calendarWidgetTab1.setGridVisible(True)
-        self.calendarWidgetTab1.currentPageChanged.connect(
-            lambda: self.calendarWidgetTab1.customEvent())
         self.calendarWidgetTab1.clicked.connect(
             self.calendarWidgetTab1Function)
-        self.calendarWidgetTab1Function()
+        self.calendarWidgetTab1Function(QDate.currentDate())
 
         # calendar navigation init
         self.inputCalendarMonthTab1.setCurrentIndex(
             QDate.currentDate().month()-1)
+        self.inputCalendarMonthTab1.currentIndexChanged.connect(
+            self.inputCalendarMonthTab1Function)
         self.inputCalendarYearTab1.setValue(QDate.currentDate().year())
+        self.inputCalendarYearTab1.valueChanged.connect(
+            self.inputCalendarYearTab1Function)
         self.buttonPrevYearTab1.clicked.connect(
             self.buttonPrevYearTab1Function)
         self.buttonNextYearTab1.clicked.connect(
@@ -269,9 +271,23 @@ class WindowClass(QMainWindow, form_class):
         QMessageBox.about(self, VERSION_INFO, UPDATE_INFO)
 
     # tab 1
-    def calendarWidgetTab1Function(self):
+    def calendarWidgetTab1Function(self, date):
+        # 다음 달 / 이전 달의 날짜 선택 시 내비게이션 바 값 업데이트
+        if date.month() - 1 != self.inputCalendarMonthTab1.currentIndex():
+            self.inputCalendarMonthTab1.setCurrentIndex(date.month()-1)
+        if date.year() != self.inputCalendarYearTab1.value():
+            self.inputCalendarYearTab1.setValue(date.year())
+        # 라벨 업데이트
         self.inputDateTab1.setText(
-            self.calendarWidgetTab1.selectedDate().toString("yyyy-MM-dd"))
+            date.toString("yyyy-MM-dd"))
+
+    def inputCalendarMonthTab1Function(self, index):
+        self.calendarWidgetTab1.setCurrentPage(
+            self.calendarWidgetTab1.yearShown(), index+1)
+
+    def inputCalendarYearTab1Function(self, value):
+        self.calendarWidgetTab1.setCurrentPage(
+            value, self.calendarWidgetTab1.monthShown())
 
     def changeInputPriceTab1Function(self, changeText: str):
         saveCursorPosition = self.inputPriceTab1.cursorPosition()
@@ -292,9 +308,15 @@ class WindowClass(QMainWindow, form_class):
 
     def buttonPrevYearTab1Function(self):
         self.calendarWidgetTab1.showPreviousYear()
+        # 내비게이션 바 연동
+        self.inputCalendarYearTab1.setValue(
+            self.inputCalendarYearTab1.value()-1)
 
     def buttonNextYearTab1Function(self):
         self.calendarWidgetTab1.showNextYear()
+        # 내비게이션 바 연동
+        self.inputCalendarYearTab1.setValue(
+            self.inputCalendarYearTab1.value()+1)
 
     def buttonSaveTab1Function(self):
         query = QtSql.QSqlQuery()
