@@ -6,9 +6,9 @@ from PyQt5.QtCore import Qt, QVariant, QDate, Qt, QSizeF
 from PyQt5.QtGui import QTextDocument, QTextCursor, QPainter
 from PyQt5.QtPrintSupport import QPrinter, QPrintDialog, QPrintPreviewDialog
 
-VERSION_INFO = " v1.56 정보창 - 2022-01-08"
+VERSION_INFO = " v2.0 정보창 - 2022-01-16"
 UPDATE_INFO = \
-    "상세 업데이트 확인 : https://github.com/Cherrue/pythonPumpCar"
+    "v2.0 반응형 ui 적용<br>업데이트 히스토리 링크 : <a href='https://github.com/Cherrue/pythonPumpCar/releases'>릴리즈노트</a>"
 
 # UI파일 연결
 # 단, UI파일은 Python 코드 파일과 같은 디렉토리에 위치해야한다.
@@ -26,7 +26,7 @@ LIST_HEADER_NAME_TAB2 = ["data_id", "거래일자", "거래처", "시작",
 LIST_HEADER_SIZE_TAB2 = [10, 130, 130, 66, 66, 65, 100, 65, 65, 136]
 LIST_HEADER_NAME_TAB3 = ["거래일자", "거래처", "시작시간",
                          "종료시간", "타설량", "금액", "총매출액", "차량", "수금", "비고"]
-LIST_HEADER_SIZE_TAB3 = [130, 200, 80, 80, 65, 150, 200, 65, 65, 200]
+LIST_HEADER_SIZE_TAB3 = [130, 200, 80, 80, 65, 150, 200, 65, 65, 190]
 LIST_HEADER_NAME_TAB4 = ["순번", "거래일자", "거래처", "시작",
                          "종료", "타설량", "금액", "차량", "수금", "비고"]
 LIST_HEADER_SIZE_TAB4 = [60, 130, 200, 80, 80, 65, 150, 65, 65, 200]
