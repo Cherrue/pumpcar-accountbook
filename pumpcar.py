@@ -583,7 +583,7 @@ class WindowClass(QMainWindow, form_class):
         model = self.modelWorkedDataTab3
         printIndex = [0, 1, 2, 3, 4, 5, 7, 8, 9]
         for row in range(model.rowCount()):
-            if row == 38:
+            if row == 40 or (row > 40 and (row - 40) % 48 == 0):
                 htmlString.append(" <tr>")
                 htmlString.append("     <td align='center'>거래일자</td>")
                 htmlString.append("     <td align='center'>거래처</td>")
@@ -599,6 +599,8 @@ class WindowClass(QMainWindow, form_class):
             htmlString.append(" <tr>")
             for col in printIndex:
                 data = model.data(model.index(row, col))
+                if len(data) > 15:
+                    data = data[:15]
                 htmlString.append(
                     "     <td>"+data+"</td>")
             htmlString.append(" </tr>")
