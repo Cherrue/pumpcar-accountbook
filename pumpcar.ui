@@ -95,7 +95,7 @@
          </attribute>
          <layout class="QGridLayout" name="gridLayout_6">
           <item row="0" column="0">
-           <layout class="QGridLayout" name="gridLayout_5" rowstretch="5,0,0,0,0,0,0,0,0,0,0" columnstretch="12,0,0,0,0">
+           <layout class="QGridLayout" name="gridLayout_5" rowstretch="5,0,0,0,0,0,0,0,0,0,0" columnstretch="12,0,0,0">
             <item row="10" column="0" colspan="3">
              <widget class="QLabel" name="emptySpace2Tab1">
               <property name="text">
@@ -813,7 +813,7 @@
              </widget>
             </item>
             <item row="6" column="3" rowspan="5">
-             <widget class="YearButtonCalendarWidget" name="calendarWidgetTab1">
+             <widget class="QCalendarWidget" name="calendarWidgetTab1">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                 <horstretch>0</horstretch>
@@ -2328,13 +2328,6 @@
    </layout>
   </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>YearButtonCalendarWidget</class>
-   <extends>QCalendarWidget</extends>
-   <header>yearbuttoncalendarwidget</header>
-  </customwidget>
- </customwidgets>
  <tabstops>
   <tabstop>tabWidgetMain</tabstop>
   <tabstop>tableDataTab1</tabstop>
